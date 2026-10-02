@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Questrial';
+  src: url('/src/fonts/questrial.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Square';
+  src: url('/src/fonts/square.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+/*
+INDEX
+*/
+h1.title {
+    font-family: square;
+    font-size: 100px;
+}
+h2.subtitle {
+    font-family: questrial;
+    font-size: 30px;
+
+    margin-top: -80px;
+    margin-bottom: 10%;
+}
+
+
+
+
+.tools.a {
+    display: block;
+    width: 50%;
+    height: 50%;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 10px;
+
+    transition: transform 0.5s;
+}
+.tools.a:hover {
+    transform: scale(1.05);
+}
+
+
+.tools.div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    min-height: 200px;
+
+    background-color: rgb(31, 0, 80);
+}
+
+
+.tools.container.img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 0;
+
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 70%);
+    mask-image: linear-gradient(to right, transparent, #000 70%);
+}
+
+
+/* texto por cima da imagem */
+div.tools.container {
+    position: relative;
+    z-index: 1;
+
+    max-width: 55%;
+    padding: 20px;
+}
+
+
+.tools.title {
+    font-family: square;
+    font-size: 30px;
+}
+.tools.description {
+    font-family: questrial;
+    font-size: 20px;
+}

@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'Questrial';
+  src: url('/src/fonts/questrial.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Square';
+  src: url('/src/fonts/square.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+    min-height: 100vh;   /* fallback */
+    min-height: 100dvh;
+
+    background-color: black;
+    color: white;
+}
+
+
+
+/*
+NAV
+*/
+nav {
+  width: 100%;
+
+  border-bottom: white 1px solid;
+
+  display: table;
+  align-items: baseline;
+}
+
+nav a {
+  text-decoration: none;
+
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+.nav.cofm {
+    font-size: 50px;
+    font-family: square;
+}
+
+.nav.slogan {
+  margin-left: 10px;
+
+  color: #b5bac1;
+
+  font-family: questrial;
+}
+
+.nav.left {
+  display: flex;
+  align-items: baseline;
+
+  float: left;
+}
+
+.nav.right {
+  float: right;
+}
+
+
+/*
+FOOTER
+*/
+footer {
+    border-top: white 1px solid;
+
+    margin-top: auto;
+
+    width: 95%;
+
+    padding: 10px;
+
+    display: table;
+}
+.footer.container {
+    display: table-row;
+}
+
+footer a {
+    color: rgb(78, 0, 202);
+
+    text-decoration: none;
+}
+
+.footer.right {
+    float: right;
+}
+.footer.left {
+    display: flex;
+    flex-direction: column;
+
+    float: left;
+
+    line-height: 1px;
+}
+
+.footer.cofm {
+    font-size: 50px;
+    font-family: square;
+
+    color: #b5bac1;
+}
+
+.footer.left p {
+    font-family: questrial;
+
+    color: #b5bac1;
+
+    font-size: 14px;
+}
+
+.footer.left.socials {
+    margin-top: 50px;
+
+    flex-direction: row;
+}
+
+
+
+/*
+SVG
+*/
+.svgContainer .svgIcon,
+.svgLink {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  transition: fill 0.5s ease;
+}
+
+.svgContainer {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.svgContainer[title="Meu perfil no Bluesky"] .svgIcon,
+.svgContainer[title="Meu canal no YouTube"] .svgIcon,
+.svgContainer[title="Meu perfil no Last.fm"] .svgIcon,
+.svgContainer[title="Meu perfil no GitHub"] .svgIcon,
+.svgContainer[title="Meu perfil no X/Twitter"] .svgIcon,
+.svgContainer[title="My Bluesky profile"] .svgIcon,
+.svgContainer[title="My YouTube channel"] .svgIcon,
+.svgContainer[title="My Last.fm profile"] .svgIcon,
+.svgContainer[title="My GitHub profile"] .svgIcon,
+.svgContainer[title="My X/Twitter profile"] .svgIcon {
+  fill: white;
+}
+
+.svgContainer[title="Meu perfil no Bluesky"]:hover .svgIcon,
+.svgContainer[title="My Bluesky profile"]:hover .svgIcon {
+  fill: #1185fe;
+}
+
+.svgContainer[title="Meu canal no YouTube"]:hover .svgIcon,
+.svgContainer[title="My YouTube channel"]:hover .svgIcon {
+  fill: red;
+}
+
+.svgContainer[title="Meu perfil no Last.fm"]:hover .svgIcon,
+.svgContainer[title="My Last.fm profile"]:hover .svgIcon {
+  fill: #d51007;
+}
+
+.svgContainer[title="Meu perfil no GitHub"]:hover .svgIcon,
+.svgContainer[title="My GitHub profile"]:hover .svgIcon {
+  fill: #2b3137;
+}
+
+.svgContainer[title="Meu perfil no X/Twitter"]:hover .svgIcon,
+.svgContainer[title="My X/Twitter profile"]:hover .svgIcon {
+  fill: #326ada;
+}

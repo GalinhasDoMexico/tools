@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Link Component Embeds / Discord / cofm.tools</title>
+
+    <link rel="stylesheet" href="/src/css/global.css">
+    <link rel="stylesheet" href="/src/css/tools/discord/link-component-embeds.css">
+
+    <script src="/src/js/discord/link-component-embeds.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav left">
+            <a class="nav cofm" href="/">cofm.tools</a>
+            <p class="nav slogan">Ferramentas aleatórias, mas úteis... ou não</p>
+        </div>
+        <div class="nav right">
+            <p title="Esta ferramenta está em fase BETA, ela pode apresentar problemas." style="color: red;">b0.0.1</p>
+        </div>
+    </nav>
+    <h1 class="main title">Link Component Embeds</h1>
+    <div style="width: 90%; margin-bottom: 50px;">
+
+        <div class="options">
+            <h3>Geral</h3>
+            <div id="accent">
+                <label><input type="checkbox" id="usecolor" checked> Cor de destaque (Hex)</label>
+                <div class="accent-row">
+                    <input type="color" id="color" value="#5865f2">
+                    <input id="hex" value="#5865F2" maxlength="7" spellcheck="false">
+                </div>
+                <div class="swatches">
+                    <button type="button" data-c="#7c3aed" style="background:#7c3aed"></button>
+                    <button type="button" data-c="#ed2f4a" style="background:#ed2f4a"></button>
+                    <button type="button" data-c="#23a55a" style="background:#23a55a"></button>
+                    <button type="button" data-c="#f0b232" style="background:#f0b232"></button>
+                    <button type="button" data-c="#eb459e" style="background:#eb459e"></button>
+                    <button type="button" data-c="#313338" style="background:#313338"></button>
+                    <button type="button" data-c="#000000" style="background:#000000"></button>
+                    <button type="button" data-c="#ffffff" style="background:#ffffff"></button>
+                </div>
+            </div>
+
+            <p>Fallback Open Graph (opcional)</p>
+            <input id="ogt" placeholder="og:title"><br>
+            <input id="ogd" placeholder="og:description"><br>
+            <input id="ogi" placeholder="og:image (URL)">
+
+            <h3 style="margin-top: 50px;">Componentes da Embed</h3>
+            <p>Seções</p>
+            <button data-add="secthumb">+ Seção c/ thumbnail</button>
+            <button data-add="secbtn">+ Seção c/ botão</button>
+            <br>
+            <p>Exemplos</p>
+            <select id="examples">
+                <option value="">Carregar exemplo...</option>
+                <option value="site">Site simples</option>
+                <option value="thumb">Seção com thumbnail</option>
+                <option value="btn">Seção com botão</option>
+                <option value="full">Completo</option>
+            </select>
+            <p>Adicionar Elemento</p>
+            <button data-add="text">+ Texto</button>
+            <button data-add="gallery">+ Galeria</button>
+            <button data-add="sep">+ Separador</button>
+            <button data-add="buttons">+ Botões</button>
+
+            <div id="blocks"></div>
+        </div>
+
+        <div class="preview right">
+            <h3>Preview</h3>
+            <div id="preview"></div>
+
+            <h3 style="margin-top: 110px;">Código <small id="size"></small></h3>
+            <textarea id="out" readonly rows="12" style="width:100%"></textarea><br>
+            <button id="copy">Copiar</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer container">
+            <div class="footer left">
+                <p>Fontes utilizadas nesta página: <a target="_blank" href="https://support.discord.com/hc/pt-br/articles/9507780972951-gg-sans-FAQ-de-Atualiza%C3%A7%C3%A3o-da-Fonte">gg sans</a> e <a target="_blank"
+                        href="https://www.1001freefonts.com/square-deal.font">Square Deal</a></p>
+                <p>Esta ferramenta está sob a licença <a target="_blank"
+                        href="https://galinhasdomexico.github.io/license">GPL-3.0 License.</a></p>
+                <div class="footer left socials">
+                    <div title="Meu perfil no Bluesky" class="svgContainer">
+                        <a href="https://chickenofmexico.bsky.social/" target="_blank" class="svgLink">
+                            <svg class="svgIcon fade">
+                                <use href="/src/img/sprites.svg#bskySvg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div title="Meu canal no YouTube" class="svgContainer">
+                        <a href="https://youtube.com/@chickenofmexico" target="_blank" class="svgLink">
+                            <svg class="svgIcon fade">
+                                <use href="/src/img/sprites.svg#youtubeSvg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div title="Meu perfil no Last.fm" class="svgContainer">
+                        <a href="https://last.fm/user/ChickenOfMexico" target="_blank" class="svgLink">
+                            <svg class="svgIcon fade">
+                                <use href="/src/img/sprites.svg#lastfmSvg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div title="Meu perfil no GitHub" class="svgContainer">
+                        <a href="https://github.com/GalinhasDoMexico" target="_blank" class="svgLink">
+                            <svg class="svgIcon fade">
+                                <use href="/src/img/sprites.svg#githubSvg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div title="Meu perfil no X/Twitter" class="svgContainer">
+                        <a href="https://x.com/ChickenOfMexico" target="_blank" class="svgLink">
+                            <svg class="svgIcon fade">
+                                <use href="/src/img/sprites.svg#xtwitterSvg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer right">
+                <p class="footer cofm">cofm.tools</p>
+            </div>
+        </div>
+    </footer>
+</body>
